@@ -1,0 +1,25 @@
+site_name: {{ package-name }}
+repo_url: https://github.com/signavio/{{ package-name }}
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Release Notes: release_notes.md
+
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            show_source: false
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "{{ package-name }}"
+version = "0.0.0"
+description = "python-project-template"
+authors = ["Christian Schwarz"]
+readme = "README.md"
+packages = [{ include = "package_name" }]
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+packaging = ">=24.0"
+
+[tool.poetry.group.dev.dependencies]
+mkdocstrings = { extras = ["python"], version = ">=1.0.2,<1.1.0" }
+mkdocs-material = ">=9.6.21,<10.0.0"
+mkdocs = ">=1.6.1,<2.0.0"
+pytest = ">=8.2,<9"
+pytest-asyncio = "^0.24.0"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
