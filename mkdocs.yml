@@ -1,5 +1,5 @@
-site_name: {{ package-name }}
-repo_url: https://github.com/signavio/{{ package-name }}
+site_name: package-name
+repo_url: https://github.com/user/package-name
 theme:
   name: material
 
